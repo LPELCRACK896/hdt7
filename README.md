@@ -2,6 +2,9 @@
 Algoritmos y Estructura de Datos Sección 20  
 Autor:
 - Luis González 20008
+  
+
+GIT: https://github.com/LPELCRACK896/hdt7.git
 
 ACLARACION DEL FUNCINAMIENTO
 
