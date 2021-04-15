@@ -1,5 +1,8 @@
 import jdk.swing.interop.SwingInterOpUtils;
 
+/**
+ * @author Luis Gonzalez
+ */
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;

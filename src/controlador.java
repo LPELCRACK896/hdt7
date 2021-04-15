@@ -1,10 +1,17 @@
 import java.util.HashMap;
 
+/**
+ * @author Luis Gonzalez
+ */
 public class controlador {
     public BST diccionarioIngles;
     public BST diccionarioEspanol;
     public BST diccionarioFrances;
     private lector leer;
+
+    /**
+     * Constructor
+     */
     public controlador(){
         diccionarioIngles = new BST("English");
         diccionarioEspanol = new BST("Spanish");
@@ -12,6 +19,13 @@ public class controlador {
         leer = new lector();
         leer.lecturaDeDiccionario(diccionarioIngles, diccionarioEspanol, diccionarioFrances);
     }
+
+    /**
+     *
+     * @param idiomaOriginal ingresa el idioma del la frase que se traduce
+     * @param idiomaDestino ingresa el idioma al que desesa traducir
+     * @return devuelve enunciado de la traduccion
+     */
     public String traduceme(String idiomaOriginal, String idiomaDestino){
         BST diccionario;
         diccionario=(idiomaOriginal.equals("Spanish"))?diccionarioEspanol:(idiomaOriginal.equals("English"))?diccionarioIngles:diccionarioFrances;
@@ -31,6 +45,10 @@ public class controlador {
         }
         return enunciadoFinal;
     }
+
+    /**
+     * Muestra todos los recorridos de los diccionarios
+     */
     public void muestraRecorridosInOrder(){
         System.out.println("****De ingles a frances y español****");
          diccionarioIngles.recorridoInorder(diccionarioIngles.raiz);

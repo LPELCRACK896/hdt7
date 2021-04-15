@@ -1,5 +1,8 @@
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author Luis Gonzalez
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,12 +13,15 @@ public class Nodo {
     public Nodo izq;
     public Nodo der;
     public int key=0;
+
     public HashMap<String, HashMap<String, String>> traducciones;
-    /*
-    *          Si el diccionario esta en español: Traduccion1 debe estar en ingles
-    *          Si el diccionario esta en ingles: Traduccion1 debe estar en español
-    *          Si el diccionario esta en Frances: Traduccion1 debe estar en español
-    *
+
+    /**
+     *
+     * @param palabraOriginal ingresa la palabra del idioma original con respecto al diccionario creado
+     * @param traduccionUno ingresa la misma palabra en otro idioma
+     * @param traduccionDos ingresa la misma palabra en un tercer idioma
+     * @param idiomaPalabraOriginal ingresa el idioma en el que viene la palabra original
      */
     public Nodo (String palabraOriginal, String traduccionUno, String traduccionDos, String idiomaPalabraOriginal){
             establecerKey(palabraOriginal, idiomaPalabraOriginal);
@@ -45,6 +51,12 @@ public class Nodo {
                  }
              }
     }
+
+    /**
+     *
+     * @param palabraClave
+     * @param idioma
+     */
     private void establecerKey(String palabraClave, String idioma){
         String caracteresString;
         if(idioma.equals("Spanish")) caracteresString="abcdefghijklmnñopqrstuvwxyz";
