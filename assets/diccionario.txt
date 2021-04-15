@@ -1,0 +1,2 @@
+house,hogar,loger
+dog,perro,chien
